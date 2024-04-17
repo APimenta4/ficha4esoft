@@ -17,7 +17,7 @@ public class JanelaPrincipal extends JFrame{
         JFrame frame = new JanelaPrincipal("MinesFinder");
         frame.setVisible(true);
 
-        //if "comprar" is clicked, open PainelComprar
+        //if "comprar" is clicked, open PainelComprar in JanelaComprar
         comprar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,6 +25,7 @@ public class JanelaPrincipal extends JFrame{
                 frame.setVisible(true);
             }
         });
+
 
     }
 
