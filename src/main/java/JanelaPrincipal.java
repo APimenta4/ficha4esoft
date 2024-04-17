@@ -1,14 +1,31 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class JanelaPrincipal extends JFrame{
 
 
     private JPanel PainelPrincipal;
+    private JButton comprar;
+    private JButton pesquisar;
+    private JButton compararButton;
+
+    private JPanel PainelComprar;
 
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         JFrame frame = new JanelaPrincipal("MinesFinder");
         frame.setVisible(true);
+
+        //if "comprar" is clicked, open PainelComprar
+        comprar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JanelaComprar("Comprar");
+                frame.setVisible(true);
+            }
+        });
+
     }
 
 
