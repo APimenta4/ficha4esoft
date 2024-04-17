@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class JanelaComprar {
+public class JanelaComprar extends JFrame{
     private JPanel PainelComprar;
 
     public JanelaComprar(String title) {
