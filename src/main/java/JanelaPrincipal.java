@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 public class JanelaPrincipal extends JFrame{
 
     private JPanel PainelPrincipal;
+    private JButton Procurar;
     private JButton comprar;
     private JButton pesquisar;
     private JButton comparar;
@@ -26,7 +27,7 @@ public class JanelaPrincipal extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JanelaComprar frame = new JanelaComprar("Comprar");
-                frame.setVisible(true);
+                //frame.setVisible(true);
             }
         });
 
