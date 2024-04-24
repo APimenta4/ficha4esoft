@@ -1,14 +1,20 @@
 import javax.swing.*;
+import java.util.LinkedList;
+
 public class CriarConta extends JFrame {
 
     private JPanel PainelCriarConta;
 
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JPasswordField passwordField1;
-    private JTextField textField4;
-    private JButton continuarParaConfirmarOsButton;
+    private JTextField nomeTextField;
+    private JTextField apelidoTextField;
+    private JTextField emailTextField;
+    private JTextField telemovelTextField;
+    private JButton confirmarButton;
+    private JButton imprimirButton;
+    private JTextField passwordTextField;
+    //lista de contas
+    private LinkedList<Conta> contas;
+
 
     public CriarConta(String title) {
         JFrame frame = new JFrame(title);
@@ -18,16 +24,17 @@ public class CriarConta extends JFrame {
         frame.setVisible(true);
     }
 
-    public void criarConta(){
-        String nome = textField1.getText();
-        String apelido = textField2.getText();
-        String email = textField3.getText();
-        String password = passwordField1.getText();
-        String telemovel = textField4.getText();
+    public CriarConta() {
+        String nome = nomeTextField.getText();
+        String apelido = apelidoTextField.getText();
+        String email = emailTextField.getText();
+        String password = passwordTextField.getText();
+        String telemovel = telemovelTextField.getText();
+
+        Conta conta = new Conta(nome, apelido, email, password, telemovel);
+        contas.add(conta);
+
     }
-
-    //ao clicar no butao invoca a funcao criar conta
-
 
 
 }
