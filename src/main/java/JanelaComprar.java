@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class JanelaComprar {
     private JPanel PainelComprar;
+    private JButton comprarButton;
 
     public JanelaComprar(String title) {
         JFrame frame = new JFrame(title);

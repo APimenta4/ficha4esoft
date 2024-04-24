@@ -26,7 +26,7 @@ public class CriarConta extends JFrame {
         String telemovel = textField4.getText();
     }
 
-
+    //ao clicar no butao invoca a funcao criar conta
 
 
 
