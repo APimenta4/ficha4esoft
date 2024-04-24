@@ -8,6 +8,8 @@ public class JanelaPrincipal extends JFrame{
     private JButton comprar;
     private JButton pesquisar;
     private JButton comparar;
+    private JButton criarContaButton;
+
 
     public static void main(String[] args) {
         JFrame frame = new JanelaPrincipal("App vendas");
@@ -40,6 +42,14 @@ public class JanelaPrincipal extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new JFrame("Comparar");
+                frame.setVisible(true);
+            }
+        });
+
+        criarContaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new CriarConta("Criar Conta");
                 frame.setVisible(true);
             }
         });
