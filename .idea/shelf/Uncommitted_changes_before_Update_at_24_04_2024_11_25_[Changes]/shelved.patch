@@ -1,0 +1,309 @@
+Index: src/main/java/JanelaPesquisar.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class JanelaPesquisar {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/JanelaPesquisar.java b/src/main/java/JanelaPesquisar.java
+--- a/src/main/java/JanelaPesquisar.java	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/src/main/java/JanelaPesquisar.java	(date 1713954242446)
+@@ -1,2 +1,5 @@
++import javax.swing.*;
++
+ public class JanelaPesquisar {
++    private JLabel PesquisarProdutos;
+ }
+Index: src/main/java/JanelaPrincipal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class JanelaPrincipal extends JFrame{\r\n\r\n\r\n    private JPanel PainelPrincipal;\r\n    private JButton comprar;\r\n    private JButton pesquisar;\r\n    private JButton compararButton;\r\n\r\n    private JPanel PainelComprar;\r\n\r\n\r\n    public void main(String[] args) {\r\n        JFrame frame = new JanelaPrincipal(\"MinesFinder\");\r\n        frame.setVisible(true);\r\n\r\n        //if \"comprar\" is clicked, open PainelComprar in JanelaComprar\r\n        comprar.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                JFrame frame = new JanelaComprar(\"Comprar\");\r\n                frame.setVisible(true);\r\n            }\r\n        });\r\n\r\n\r\n    }\r\n\r\n\r\n    public JanelaPrincipal(String title) {\r\n        super(title);\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n        setContentPane(PainelPrincipal);\r\n        pack();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/JanelaPrincipal.java b/src/main/java/JanelaPrincipal.java
+--- a/src/main/java/JanelaPrincipal.java	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/src/main/java/JanelaPrincipal.java	(date 1713356960621)
+@@ -6,6 +6,7 @@
+ 
+ 
+     private JPanel PainelPrincipal;
++    private JButton Procurar;
+     private JButton comprar;
+     private JButton pesquisar;
+     private JButton compararButton;
+Index: src/main/java/JanelaComprar.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\n\r\npublic class JanelaComprar {\r\n    private JPanel PainelComprar;\r\n\r\n    public JanelaComprar(String title) {\r\n        JFrame frame = new JFrame(title);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        frame.setContentPane(PainelComprar);\r\n        frame.pack();\r\n        frame.setVisible(true);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/JanelaComprar.java b/src/main/java/JanelaComprar.java
+--- a/src/main/java/JanelaComprar.java	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/src/main/java/JanelaComprar.java	(date 1713356960614)
+@@ -1,6 +1,6 @@
+ import javax.swing.*;
+ 
+-public class JanelaComprar {
++public class JanelaComprar extends JFrame {
+     private JPanel PainelComprar;
+ 
+     public JanelaComprar(String title) {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c1eaa15d-1c28-4c64-bf54-a5bf6e57fa88\" name=\"Changes\" comment=\"inicio\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaComparar.form\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaComparar.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaComprar.form\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaComprar.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaPesquisar.form\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/JanelaPesquisar.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/JanelaPrincipal.form\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/JanelaPrincipal.form\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/JanelaPrincipal.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/JanelaPrincipal.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"78795818-e46d-479c-98cc-487232f58228\" />\r\n        <option name=\"url\" value=\"https://github.com/APimenta4/ficha4esoft.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2fE7jjTU6rpcZeKN5GgUemzFuR2\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"JanelaPrincipal\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"JanelaPrincipal\" />\r\n      <module name=\"Ficha\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.JanelaPrincipal\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c1eaa15d-1c28-4c64-bf54-a5bf6e57fa88\" name=\"Changes\" comment=\"\" />\r\n      <created>1713354523791</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1713354523791</updated>\r\n      <workItem from=\"1713354525124\" duration=\"1917000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"inicio\">\r\n      <created>1713354549211</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713354549211</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"inicio\">\r\n      <created>1713354758959</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713354758959</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"inicio\">\r\n      <created>1713354838409</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713354838409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"inicio\">\r\n      <created>1713354936580</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713354936580</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"inicio\">\r\n      <created>1713355083770</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713355083770</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"inicio\">\r\n      <created>1713355928398</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713355928398</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"inicio\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"inicio\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/.idea/workspace.xml	(date 1713954180354)
+@@ -5,12 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="c1eaa15d-1c28-4c64-bf54-a5bf6e57fa88" name="Changes" comment="inicio">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaComparar.form" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaComparar.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaComprar.form" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaComprar.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaPesquisar.form" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/JanelaPesquisar.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/JanelaComprar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JanelaComprar.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/JanelaPesquisar.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JanelaPesquisar.form" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/JanelaPrincipal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JanelaPrincipal.form" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/JanelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JanelaPrincipal.java" afterDir="false" />
+     </list>
+@@ -29,11 +27,11 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -45,36 +43,32 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="MavenImportPreferences">
+-    <option name="importingSettings">
+-      <MavenImportingSettings>
+-        <option name="workspaceImportEnabled" value="true" />
+-      </MavenImportingSettings>
+-    </option>
+-  </component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 8
++}]]></component>
+   <component name="ProjectId" id="2fE7jjTU6rpcZeKN5GgUemzFuR2" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration name="JanelaPrincipal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="JanelaPrincipal" />
+@@ -97,7 +91,8 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1713354523791</updated>
+-      <workItem from="1713354525124" duration="1917000" />
++      <workItem from="1713354525124" duration="1337000" />
++      <workItem from="1713953536577" duration="642000" />
+     </task>
+     <task id="LOCAL-00001" summary="inicio">
+       <created>1713354549211</created>
+@@ -134,14 +129,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1713355083770</updated>
+     </task>
+-    <task id="LOCAL-00006" summary="inicio">
+-      <created>1713355928398</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713355928398</updated>
+-    </task>
+-    <option name="localTasksCounter" value="7" />
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: src/main/java/JanelaPrincipal.form
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<form xmlns=\"http://www.intellij.com/uidesigner/form/\" version=\"1\" bind-to-class=\"JanelaPrincipal\">\r\n  <grid id=\"27dc6\" binding=\"PainelPrincipal\" layout-manager=\"GridLayoutManager\" row-count=\"4\" column-count=\"2\" same-size-horizontally=\"false\" same-size-vertically=\"false\" hgap=\"-1\" vgap=\"-1\">\r\n    <margin top=\"0\" left=\"0\" bottom=\"0\" right=\"0\"/>\r\n    <constraints>\r\n      <xy x=\"20\" y=\"20\" width=\"1920\" height=\"1080\"/>\r\n    </constraints>\r\n    <properties>\r\n      <minimumSize width=\"1920\" height=\"1080\"/>\r\n      <preferredSize width=\"1920\" height=\"1080\"/>\r\n    </properties>\r\n    <border type=\"none\"/>\r\n    <children>\r\n      <component id=\"eb9ac\" class=\"javax.swing.JLabel\">\r\n        <constraints>\r\n          <grid row=\"0\" column=\"0\" row-span=\"1\" col-span=\"2\" vsize-policy=\"0\" hsize-policy=\"0\" anchor=\"8\" fill=\"0\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"JANELA PRINCIPAL\"/>\r\n        </properties>\r\n      </component>\r\n      <vspacer id=\"2b8c\">\r\n        <constraints>\r\n          <grid row=\"1\" column=\"1\" row-span=\"3\" col-span=\"1\" vsize-policy=\"6\" hsize-policy=\"1\" anchor=\"0\" fill=\"2\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n      </vspacer>\r\n      <component id=\"5aeb9\" class=\"javax.swing.JButton\" binding=\"comprar\">\r\n        <constraints>\r\n          <grid row=\"3\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Comparar\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"f4a0c\" class=\"javax.swing.JButton\" binding=\"pesquisar\">\r\n        <constraints>\r\n          <grid row=\"2\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Pesquisa\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"91eea\" class=\"javax.swing.JButton\" binding=\"comparar\">\r\n        <constraints>\r\n          <grid row=\"1\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Comparar\"/>\r\n        </properties>\r\n      </component>\r\n    </children>\r\n  </grid>\r\n</form>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/JanelaPrincipal.form b/src/main/java/JanelaPrincipal.form
+--- a/src/main/java/JanelaPrincipal.form	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/src/main/java/JanelaPrincipal.form	(date 1713357265979)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="JanelaPrincipal">
+-  <grid id="27dc6" binding="PainelPrincipal" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++  <grid id="27dc6" binding="PainelPrincipal" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+     <margin top="0" left="0" bottom="0" right="0"/>
+     <constraints>
+       <xy x="20" y="20" width="1920" height="1080"/>
+@@ -11,41 +11,26 @@
+     </properties>
+     <border type="none"/>
+     <children>
+-      <component id="eb9ac" class="javax.swing.JLabel">
++      <component id="b8e9c" class="javax.swing.JButton" binding="Procurar">
+         <constraints>
+-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
++          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+         </constraints>
+         <properties>
+-          <text value="JANELA PRINCIPAL"/>
++          <alignmentX value="0.0"/>
++          <alignmentY value="0.5"/>
++          <margin top="0" left="0" bottom="0" right="0"/>
++          <text value="Procurar"/>
++          <verticalAlignment value="0"/>
+         </properties>
+       </component>
+-      <vspacer id="2b8c">
+-        <constraints>
+-          <grid row="1" column="1" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+-        </constraints>
+-      </vspacer>
+-      <component id="5aeb9" class="javax.swing.JButton" binding="comprar">
++      <component id="eb9ac" class="javax.swing.JLabel">
+         <constraints>
+-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
++            <preferred-size width="100" height="430"/>
++          </grid>
+         </constraints>
+         <properties>
+-          <text value="Comparar"/>
+-        </properties>
+-      </component>
+-      <component id="f4a0c" class="javax.swing.JButton" binding="pesquisar">
+-        <constraints>
+-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+-        </constraints>
+-        <properties>
+-          <text value="Pesquisa"/>
+-        </properties>
+-      </component>
+-      <component id="91eea" class="javax.swing.JButton" binding="comparar">
+-        <constraints>
+-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+-        </constraints>
+-        <properties>
+-          <text value="Comparar"/>
++          <text value="JANELA PRINCIPAL"/>
+         </properties>
+       </component>
+     </children>
+Index: src/main/java/JanelaPesquisar.form
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<form xmlns=\"http://www.intellij.com/uidesigner/form/\" version=\"1\" bind-to-class=\"JanelaPesquisar\">\r\n  <grid id=\"27dc6\" row-count=\"1\" column-count=\"1\" layout-manager=\"GridLayoutManager\">\r\n    <margin top=\"0\" left=\"0\" bottom=\"0\" right=\"0\"/>\r\n    <constraints>\r\n      <xy x=\"20\" y=\"20\" width=\"500\" height=\"400\"/>\r\n      <grid row=\"0\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"3\" hsize-policy=\"3\" anchor=\"0\" fill=\"3\" indent=\"0\" use-parent-layout=\"false\"/>\r\n    </constraints>\r\n    <properties/>\r\n    <border type=\"none\"/>\r\n    <children/>\r\n  </grid>\r\n</form>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/JanelaPesquisar.form b/src/main/java/JanelaPesquisar.form
+--- a/src/main/java/JanelaPesquisar.form	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/src/main/java/JanelaPesquisar.form	(date 1713954310500)
+@@ -1,13 +1,31 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="JanelaPesquisar">
+-  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager">
++  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+     <margin top="0" left="0" bottom="0" right="0"/>
+     <constraints>
+       <xy x="20" y="20" width="500" height="400"/>
+-      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+     </constraints>
+     <properties/>
+     <border type="none"/>
+-    <children/>
++    <children>
++      <hspacer id="24cfd">
++        <constraints>
++          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <vspacer id="59b35">
++        <constraints>
++          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </vspacer>
++      <component id="8f466" class="javax.swing.JLabel" binding="PesquisarProdutos">
++        <constraints>
++          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
++        </constraints>
++        <properties>
++          <text value="O que procura?"/>
++        </properties>
++      </component>
++    </children>
+   </grid>
+ </form>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d61766c23daa3ecabd04f24be2b6e32ee61acb66)
++++ b/.idea/misc.xml	(date 1713356668383)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
